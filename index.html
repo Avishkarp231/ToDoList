@@ -12,7 +12,7 @@
         <h1>To Do List</h1>
     </div>
     <div class="date">
-        <p>Current Date and Time is <span id='date-time'></span>.</p>
+        <p>Current Time and Date is <span id='date-time'></span>.</p>
     </div>
 </div>
     <div class="container">
@@ -58,8 +58,15 @@
     </div>
 </body>
 <script>
-    var dt = new Date();
-    document.getElementById('date-time').innerHTML=dt;
+    let a;
+        let time;
+        let date;
+        setInterval(() => {
+        a = new Date();
+        time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+        date = a.toLocaleDateString();
+        document.getElementById('date-time').innerHTML = time + " and " + date;
+    }, 1000);
     
     function newElementt() {
   var li = document.createElement("li");
