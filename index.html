@@ -84,27 +84,8 @@
       date = a.toLocaleDateString();
       document.getElementById("date-time").innerHTML = time + " and " + date;
     }, 1000);
-// Adding a close button to every item of the list
-
-    var myNodelist = document.getElementsByTagName("LI");
-    var i;
-    for (i = 0; i < myNodelist.length; i++) {
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    myNodelist[i].appendChild(span);
-    }
 
     
-    var close = document.getElementsByClassName("close");
-    var i;
-    for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-    }
-    }
     // Add a "checked" symbol when clicking on a list item
     var list = document.getElementById("myULT");
     list.addEventListener('click', function(ev) {
@@ -142,8 +123,8 @@
       var span = document.createElement("SPAN");
       var txt = document.createTextNode("\u00D7");
       span.className = "close";
-      //span.appendChild(txt);
-      li.appendChild(span);
+      span.appendChild(txt);
+      li.appendChild(spana);
 
       for (i = 0; i < close.length; i++) {
         close[i].onclick = function () {
@@ -168,7 +149,7 @@
       var span = document.createElement("SPAN");
       var txt = document.createTextNode("\u00D7");
       span.className = "close";
-      //span.appendChild(txt);
+      span.appendChild(txt);
       li.appendChild(span);
 
       for (i = 0; i < close.length; i++) {
@@ -193,7 +174,7 @@
       var span = document.createElement("SPAN");
       var txt = document.createTextNode("\u00D7");
       span.className = "close";
-      //span.appendChild(txt);
+      span.appendChild(txt);
       li.appendChild(span);
 
       for (i = 0; i < close.length; i++) {
@@ -333,7 +314,7 @@
     }
 
     .close:hover {
-    background-color: #f44336;
+    background-color: #f77bf0;
     color: white;
     }
   </style>
