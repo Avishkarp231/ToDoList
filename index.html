@@ -124,7 +124,7 @@
       var txt = document.createTextNode("\u00D7");
       span.className = "close";
       span.appendChild(txt);
-      li.appendChild(spana);
+      li.appendChild(span);
 
       for (i = 0; i < close.length; i++) {
         close[i].onclick = function () {
@@ -267,6 +267,9 @@
     }
 
     ul li {
+      cursor: pointer;
+      position: relative; 
+      list-style-type: none; 
       color: black;
       background-color: antiquewhite;
       margin: 1em 0;
@@ -303,7 +306,7 @@
     width: 7px;
     }
     ul li:nth-child(odd) {
-    background: #f3abab;
+    background: #abd9f3;
     }
 
     .close {
@@ -314,7 +317,7 @@
     }
 
     .close:hover {
-    background-color: #f77bf0;
+    background-color: #f83d0f;
     color: white;
     }
   </style>
